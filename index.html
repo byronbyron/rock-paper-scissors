@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <script src="./app.js" defer></script>
+</head>
+<body>
+    
+    <h1>Score: <span>0</span></h1>
+
+    <ul class="hands">
+        <li class="hand">
+            <button type="button" onClick="pickUserHand('paper')">
+                <img src="./assets/Paper.png" alt="Paper">
+            </button>
+        </li>
+        <li class="hand">
+            <button type="button" onClick="pickUserHand('scissors')">
+                <img src="./assets/Scissors.png" alt="Scissors">
+            </button>
+        </li>
+        <li class="hand">
+            <button type="button" onClick="pickUserHand('rock')">
+                <img src="./assets/Rock.png" alt="Rock">
+            </button>
+        </li>
+    </ul>
+
+    <div class="contest" style="display: none;">
+        <div class="userhand">
+            <h2>You picked</h2>
+            <img id="UserHandImage" src="/assets/Paper.png" alt="">
+        </div>
+        <div class="referee">
+            <h2>You Lose</h2>
+            <button type="button">Play again</button>
+        </div>
+        <div class="computerhand">
+            <h2>The house picked</h2>
+            <img id="ComputerHandImage" src="/assets/Scissors.png" alt="">
+        </div>
+    </div>
+</body>
+</html>

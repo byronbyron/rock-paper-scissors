@@ -1,9 +1,7 @@
 const handOptions = {
     rock: '/images/icon-rock.svg',
     paper: '/images/icon-paper.svg',
-    scissors: '/images/icon-scissors.svg',
-    // lizard: '/images/icon-lizard.svg',
-    // spock: '/images/icon-spock.svg'
+    scissors: '/images/icon-scissors.svg'
 }
 
 const decision = document.querySelector('#decision');
@@ -18,6 +16,7 @@ const pickUserHand = (hand) => {
 
     document.getElementById('UserHandImage').src = handOptions[hand];
     document.getElementById('UserHand').className = `hand-button hand-${hand}`;
+    document.querySelector('#ComputerHand + .hand-title').style.display = 'none';
 
     setTimeout(() => {
         let computerHand = pickComputerHand();
@@ -31,6 +30,7 @@ const pickComputerHand = () => {
 
     document.getElementById('ComputerHandImage').src = handOptions[computerHand];
     document.getElementById('ComputerHand').className = `hand-button hand-${computerHand}`;
+    document.querySelector('#ComputerHand + .hand-title').style.display = 'block';
 
     return computerHand;
 }
@@ -68,7 +68,7 @@ const playAgain = () => {
 
     decision.querySelector('h2').innerText = '';
     decision.style.display = 'none';
-    
+
     document.getElementById('ComputerHand').classList.add('hidden');
 }
 

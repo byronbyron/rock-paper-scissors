@@ -49,7 +49,7 @@ const referee = (userHand, computerHand) => {
         userHand === 'rock' && computerHand === 'paper' ||
         userHand === 'scissors' && computerHand === 'rock'
     ) {
-        setDecision('You lose!');
+        setDecision('You lose', 'computer-win');
     }
     
     if (
@@ -57,7 +57,7 @@ const referee = (userHand, computerHand) => {
         userHand === 'rock' && computerHand === 'scissors' ||
         userHand === 'scissors' && computerHand === 'paper'
     ) {
-        setDecision('You win!');
+        setDecision('You win', 'user-win');
         setScore(SCORE + 1);
     }
 }
@@ -70,11 +70,13 @@ const playAgain = () => {
     decision.style.display = 'none';
 
     document.getElementById('ComputerHand').classList.add('hidden');
+    document.body.className = '';
 }
 
-const setDecision = (decisionText) => {
+const setDecision = (decisionText, winner = '') => {
     decision.querySelector('h2').innerText = decisionText;
     decision.style.display = 'block';
+    document.body.classList.add(winner);
 }
 
 const setScore = (score) => {

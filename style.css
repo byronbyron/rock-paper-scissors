@@ -77,7 +77,7 @@ header span:last-child {
 }
 
 main {
-    padding: 3rem 0;
+    padding: 4.25rem 0;
 }
 
 .hands {
@@ -150,7 +150,7 @@ main {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    max-width: 375px;
+    max-width: 365px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -169,9 +169,10 @@ main {
 }
 
 .referee-title {
-    font-size: 3rem;
+    font-size: 3.5rem;
     color: white;
     text-transform: uppercase;
+    margin: 3.5rem 0 1rem;
 }
 
 .decision {
@@ -206,10 +207,40 @@ main {
 .hand-title {
     font-size: 0.875rem;
     font-weight: 600;
-    margin-top: 1.5rem;
+    margin-top: 1.75rem;
     color: white;
     text-transform: uppercase;
     letter-spacing: 0.15em;
+}
+
+.computer-win .computerhand .hand-button,
+.user-win .userhand .hand-button {
+    box-shadow: 0 0 6.25rem hsla(0, 0%, 100%, 0.5);
+}
+
+.userhand,
+.computerhand {
+    position: relative;
+    width: 100%;
+    min-height: 187px;
+}
+
+.computerhand::before {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 80px;
+    background-color: hsl(237, 49%, 15%);
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.computerhand .hand-button {
+    position: relative;
+    z-index: 10;
 }
 
 footer {

@@ -16,7 +16,7 @@ const pickUserHand = (hand) => {
 
     document.getElementById('UserHandImage').src = handOptions[hand];
     document.getElementById('UserHand').className = `hand-button hand-${hand}`;
-    document.querySelector('#ComputerHand + .hand-title').style.display = 'none';
+    // document.querySelector('#ComputerHand + .hand-title').style.display = 'none';
 
     setTimeout(() => {
         let computerHand = pickComputerHand();
@@ -30,7 +30,7 @@ const pickComputerHand = () => {
 
     document.getElementById('ComputerHandImage').src = handOptions[computerHand];
     document.getElementById('ComputerHand').className = `hand-button hand-${computerHand}`;
-    document.querySelector('#ComputerHand + .hand-title').style.display = 'block';
+    // document.querySelector('#ComputerHand + .hand-title').style.display = 'block';
 
     return computerHand;
 }

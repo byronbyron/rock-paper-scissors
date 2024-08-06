@@ -74,7 +74,22 @@
     </main>
 
     <footer>
-        <button class="btn" type="button">Rules</button>
+        <button class="btn" type="button" onClick="toggleModal()">Rules</button>
     </footer>
+
+    <div id="modal" class="modal hidden">
+        <div class="modal-overlay" onClick="toggleModal()"></div>
+        <div class="modal-inner">
+            <h2 class="modal-title">Rules</h2>
+
+            <div>
+                <img class="modal-image" src="./images/image-rules.svg" alt="rules">
+            </div>
+
+            <div>
+                <button class="modal-close" type="button" onClick="toggleModal()"><img src="./images/icon-close.svg" alt="Close"></button>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

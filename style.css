@@ -305,6 +305,7 @@ footer {
 @media (min-width: 768px) {
     body {
         background: radial-gradient(ellipse at center top, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+        background-repeat: no-repeat;
     }
 
     header {
@@ -483,6 +484,10 @@ footer {
 }
 
 @media (min-width: 1200px) {
+    body {
+        min-height: 768px;
+    }
+
     main {
         padding: 1rem 0;
     }

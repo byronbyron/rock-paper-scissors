@@ -1,7 +1,7 @@
 const handOptions = {
-    rock: '/images/icon-rock.svg',
-    paper: '/images/icon-paper.svg',
-    scissors: '/images/icon-scissors.svg'
+    rock: './images/icon-rock.svg',
+    paper: './images/icon-paper.svg',
+    scissors: './images/icon-scissors.svg'
 }
 
 const decision = document.querySelector('#decision');

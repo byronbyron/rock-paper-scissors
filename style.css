@@ -18,7 +18,6 @@ body {
     background: linear-gradient(to bottom, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
     display: flex;
     flex-direction: column;
-    position: relative;
 }
 
 header {
@@ -81,6 +80,12 @@ header span:last-child {
 
 main {
     padding: 4.25rem 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1366px;
+    margin: 0 auto;
 }
 
 .hands {
@@ -306,9 +311,6 @@ footer {
     body {
         background: radial-gradient(ellipse at center top, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
         background-repeat: no-repeat;
-        min-height: 768px;
-        max-width: 1366px;
-        margin: 0 auto;
     }
 
     header {
@@ -447,7 +449,7 @@ footer {
     }
 
     .modal-overlay {
-        position: absolute;
+        position: fixed;
         inset: 0;
         background-color: hsla(0, 0%, 0%, 0.5);
     }

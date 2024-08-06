@@ -9,7 +9,7 @@
     <script src="./app.js" defer></script>
 </head>
 <body>
-    <header>
+    <header class="container">
         <div class="header-inner">
             <h1><img src="./images/logo.svg" alt="Rock Paper Scissors"></h1>
             <p><span>Score</span> <span id="score">0</span></p>
@@ -17,65 +17,69 @@
     </header>
 
     <main>
-        <ul class="hands">
-            <li>
-                <button class="hand-button hand-paper" type="button" onClick="pickUserHand('paper')">
-                    <span class="hand-inner">
-                        <img src="./images/icon-paper.svg" alt="Paper">
-                    </span>
-                </button>
-            </li>
-
-            <li>
-                <button class="hand-button hand-scissors" type="button" onClick="pickUserHand('scissors')">
-                    <span class="hand-inner">
-                        <img src="./images/icon-scissors.svg" alt="Scissors">
-                    </span>
-                </button>
-            </li>
-
-            <li>
-                <button class="hand-button hand-rock" type="button" onClick="pickUserHand('rock')">
-                    <span class="hand-inner">
-                        <img src="./images/icon-rock.svg" alt="Rock">
-                    </span>
-                </button>
-            </li>
-        </ul>
+        <div class="container">
+            <ul class="hands">
+                <li>
+                    <button class="hand-button hand-paper" type="button" onClick="pickUserHand('paper')">
+                        <span class="hand-inner">
+                            <img src="./images/icon-paper.svg" alt="Paper">
+                        </span>
+                    </button>
+                </li>
     
-        <div class="contest" style="display: none;">
-            <div class="userhand">
-                <button id="UserHand" class="hand-button hand-paper" type="button" onClick="pickUserHand()">
-                    <span class="hand-inner">
-                        <img id="UserHandImage" src="./images/icon-paper.svg" alt="Paper">
-                    </span>
-                </button>
-                
-                <h2 class="hand-title">You picked</h2>
-            </div>
-
-            <div class="referee" id="decision" style="display: none">
-                <div class="decision">
-                    <h2 class="referee-title">You Lose</h2>
-
-                    <button class="btn btn-play-again" type="button" onClick="playAgain()">Play again</button>
+                <li>
+                    <button class="hand-button hand-scissors" type="button" onClick="pickUserHand('scissors')">
+                        <span class="hand-inner">
+                            <img src="./images/icon-scissors.svg" alt="Scissors">
+                        </span>
+                    </button>
+                </li>
+    
+                <li>
+                    <button class="hand-button hand-rock" type="button" onClick="pickUserHand('rock')">
+                        <span class="hand-inner">
+                            <img src="./images/icon-rock.svg" alt="Rock">
+                        </span>
+                    </button>
+                </li>
+            </ul>
+        
+            <div class="contest" style="display: none;">
+                <div class="userhand">
+                    <button id="UserHand" class="hand-button hand-paper" type="button" onClick="pickUserHand()">
+                        <span class="hand-inner">
+                            <img id="UserHandImage" src="./images/icon-paper.svg" alt="Paper">
+                        </span>
+                    </button>
+                    
+                    <h2 class="hand-title">You picked</h2>
                 </div>
-            </div>
-
-            <div class="computerhand">
-                <button id="ComputerHand" class="hand-button hand-paper hidden" type="button" onClick="pickComputerHand()">
-                    <span class="hand-inner">
-                        <img id="ComputerHandImage" src="./images/icon-paper.svg" alt="Paper">
-                    </span>
-                </button>
-
-                <h2 class="hand-title">The house picked</h2>
+    
+                <div class="referee" id="decision" style="display: none">
+                    <div class="decision">
+                        <h2 class="referee-title">You Lose</h2>
+    
+                        <button class="btn btn-play-again" type="button" onClick="playAgain()">Play again</button>
+                    </div>
+                </div>
+    
+                <div class="computerhand">
+                    <button id="ComputerHand" class="hand-button hand-paper hidden" type="button" onClick="pickComputerHand()">
+                        <span class="hand-inner">
+                            <img id="ComputerHandImage" src="./images/icon-paper.svg" alt="Paper">
+                        </span>
+                    </button>
+    
+                    <h2 class="hand-title">The house picked</h2>
+                </div>
             </div>
         </div>
     </main>
 
     <footer>
-        <button class="btn" type="button" onClick="toggleModal()">Rules</button>
+        <div class="container">
+            <button class="btn" type="button" onClick="toggleModal()">Rules</button>
+        </div>
     </footer>
 
     <div id="modal" class="modal hidden">

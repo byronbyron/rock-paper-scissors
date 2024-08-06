@@ -308,6 +308,7 @@ footer {
         background-repeat: no-repeat;
         min-height: 768px;
         max-width: 1366px;
+        margin: 0 auto;
     }
 
     header {
@@ -486,10 +487,6 @@ footer {
 }
 
 @media (min-width: 1200px) {
-    body {
-        min-height: 768px;
-    }
-
     main {
         padding: 1rem 0;
     }
